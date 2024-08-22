@@ -19,4 +19,3 @@ const config: webpack.Configuration = buildWebpackConfig({
 })
 
 export default config
-;('refact: config destructuring, config options')
