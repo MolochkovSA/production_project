@@ -9,8 +9,8 @@
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "."
+    "allowSyntheticDefaultImports": true
+    // "baseUrl": "."
   },
   "ts-node": {
     "compilerOptions": {
