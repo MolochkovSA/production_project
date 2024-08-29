@@ -6,6 +6,7 @@ import { classNames } from 'shared/lib'
 import { useTheme } from './providers/ThemeProvider'
 
 import './styles/index.scss'
+import { AppRouter } from './providers/router'
 
 export const App = () => {
   const { theme, toggleTheme } = useTheme()
@@ -15,13 +16,7 @@ export const App = () => {
       <button onClick={toggleTheme}>theme</button>
       <Link to="/">Main</Link>
       <Link to="/about">About</Link>
-
-      <Suspense fallback={<div>Идет загрузка...</div>}>
-        <Routes>
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/" element={<MainPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   )
 }
