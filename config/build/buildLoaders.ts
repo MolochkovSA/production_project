@@ -11,6 +11,20 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     exclude: /node_modules/,
   }
 
+  const svgLoader: RuleSetRule = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  }
+
+  const fileLoader: RuleSetRule = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  }
+
   const cssLoader: RuleSetRule = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -22,7 +36,10 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
         options: {
           modules: {
             auto: (path: string) => Boolean(path.includes('.module.')),
-            localIdentName: isDev ? '[path][name]__[local]__[hash:base64:5]' : '[hash:base64:8]',
+            localIdentName: isDev
+              ? // ? '[path][name]__[local]__[hash:base64:5]'
+                '[local]__[hash:base64:5]'
+              : '[hash:base64:8]',
           },
         },
       },
@@ -31,5 +48,5 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     ],
   }
 
-  return [typescriptLoader, cssLoader]
+  return [fileLoader, svgLoader, typescriptLoader, cssLoader]
 }
