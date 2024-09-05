@@ -36,10 +36,7 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
         options: {
           modules: {
             auto: (path: string) => Boolean(path.includes('.module.')),
-            localIdentName: isDev
-              ? // ? '[path][name]__[local]__[hash:base64:5]'
-                '[local]__[hash:base64:5]'
-              : '[hash:base64:8]',
+            localIdentName: isDev ? '[local]__[hash:base64:5]' : '[hash:base64:8]', // '[path][name]__[local]__[hash:base64:5]'
           },
         },
       },
