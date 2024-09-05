@@ -13,10 +13,10 @@ export const Navbar: React.FC<NavbarProps> = ({ className }) => {
     <div className={classNames(style.navbar, {}, [className])}>
       <div className={style.links}>
         <AppLink to="/" theme={AppLinkTheme.SECONDARY}>
-          Main
+          {'Main'}
         </AppLink>
         <AppLink to="/about" theme={AppLinkTheme.RED}>
-          About
+          {'About'}
         </AppLink>
       </div>
     </div>
