@@ -23,7 +23,6 @@ export const LangSwitcher: React.FC<LangSwitcherProps> = ({ className }) => {
       theme={ThemeButton.CLEAR}
     >
       {t('Language')}
-      {t('temp')}
     </Button>
   )
 }
