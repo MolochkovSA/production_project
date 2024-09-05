@@ -17,6 +17,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 'off',
       indent: ['error', 2],
       'i18next/no-literal-string': ['error', { markupOnly: true }],
+      'max-len': ['error', { code: 120, ignoreComments: true }],
     },
     plugins: { i18next },
   },
