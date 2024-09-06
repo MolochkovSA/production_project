@@ -1,4 +1,6 @@
 {
-    "Language": "Русский",
-  "Page not found": "Страница не найдена"
+  "Language": "Русский",
+  "Page not found": "Страница не найдена",
+  "Unexpected error": "Неожиданная ошибка",
+  "Reload page": "Обновить страницу"
 }

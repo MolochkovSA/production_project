@@ -18,6 +18,7 @@ export default [
       indent: ['error', 2],
       'i18next/no-literal-string': ['error', { markupOnly: true }],
       'max-len': ['error', { code: 120, ignoreComments: true }],
+      'react/prop-types': [2, { ignore: ['children'] }],
     },
     plugins: { i18next },
   },
