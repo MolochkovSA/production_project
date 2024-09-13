@@ -2,7 +2,7 @@ import React from 'react'
 import { classNames } from 'shared/lib'
 import { useTranslation } from 'react-i18next'
 
-import * as style from './NotFoundPage.module.scss'
+import style from './NotFoundPage.module.scss'
 
 interface NotFoundPageProps {
   className?: string

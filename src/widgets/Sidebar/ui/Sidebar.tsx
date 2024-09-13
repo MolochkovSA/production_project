@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib'
 import { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher'
 import { LangSwitcher } from './components/LangSwitcher/LangSwitcher'
 
-import * as style from './Sidebar.module.scss'
+import style from './Sidebar.module.scss'
 
 interface SidebarProps {
   className?: string

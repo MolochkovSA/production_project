@@ -1,7 +1,7 @@
 import React from 'react'
 import { classNames } from 'shared/lib'
 
-import * as style from './Button.module.scss'
+import style from './Button.module.scss'
 
 export enum ThemeButton {
   CLEAR = 'clear',

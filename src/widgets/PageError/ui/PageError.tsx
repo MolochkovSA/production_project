@@ -2,7 +2,7 @@ import React from 'react'
 import { classNames } from 'shared/lib'
 import { useTranslation } from 'react-i18next'
 
-import * as style from './PageError.module.scss'
+import style from './PageError.module.scss'
 import { Button } from 'shared/ui/Button/Button'
 
 interface PageErrorProps {

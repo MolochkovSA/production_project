@@ -35,6 +35,8 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
         loader: 'css-loader',
         options: {
           modules: {
+            namedExport: false,
+            exportLocalsConvention: 'as-is',
             auto: (path: string) => Boolean(path.includes('.module.')),
             localIdentName: isDev ? '[local]__[hash:base64:5]' : '[hash:base64:8]', // '[path][name]__[local]__[hash:base64:5]'
           },
