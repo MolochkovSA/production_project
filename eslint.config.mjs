@@ -22,6 +22,7 @@ export default [
     },
     plugins: { i18next },
   },
+
   // {
   //   ignores: ['.node_modules/*', '.build/*', '.src/*'],
   // },
