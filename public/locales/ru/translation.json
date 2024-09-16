@@ -3,5 +3,8 @@
   "Page not found": "Страница не найдена",
   "Unexpected error": "Неожиданная ошибка",
   "Reload page": "Обновить страницу",
-  "toggle": "переключать"
+  "toggle": "переключать",
+  "ShortLanguage": "RU",
+  "Main": "Главная",
+  "About": "О сайте"
 }

@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
-import { Button, ThemeButton } from 'shared/ui/Button/Button'
+import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 describe('classNames', () => {
   test('with only first param', () => {
     render(
-      <Button theme={ThemeButton.CLEAR} className="test">
+      <Button theme={ButtonTheme.CLEAR} className="test">
         TEST
       </Button>
     )
