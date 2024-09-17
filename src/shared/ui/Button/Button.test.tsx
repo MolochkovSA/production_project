@@ -1,20 +1,22 @@
 import { render, screen } from '@testing-library/react'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
-describe('classNames', () => {
-  test('with only first param', () => {
-    render(
-      <Button theme={ButtonTheme.CLEAR} className="test">
-        TEST
-      </Button>
-    )
+describe('Button', () => {
+  test('test render', () => {
+    render(<Button>TEST</Button>)
     expect(screen.getByText('TEST')).toBeInTheDocument()
-    screen.debug()
+    // screen.debug()
   })
 
-  //   test('with only first param', () => {
-  //     render(<Button theme={ThemeButton.CLEAR}>TEST</Button>)
-  //     expect(screen.getByText('TEST')).toHaveClass('clear')
-  //     screen.debug()
-  //   })
+  test('test classNames', () => {
+    render(<Button className="test">TEST</Button>)
+    expect(screen.getByText('TEST')).toHaveClass('test')
+    // screen.debug()
+  })
+
+  test('test clear theme', () => {
+    render(<Button theme={ButtonTheme.CLEAR}>TEST</Button>)
+    expect(screen.getByText('TEST')).toHaveClass('clear')
+    // screen.debug()
+  })
 })

@@ -19,12 +19,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   const { t } = useTranslation()
   const [collapsed, setCollapsed] = React.useState(false)
 
-  const onToggle = () => {
-    setCollapsed((prev) => !prev)
+  const onToggle = async () => {
+    Promise.resolve(setCollapsed((prev) => !prev))
   }
+
   return (
-    <div className={classNames(style.Sidebar, { [style.collapsed]: collapsed }, [className])}>
+    <div data-testid="sidebar" className={classNames(style.Sidebar, { [style.collapsed]: collapsed }, [className])}>
       <Button
+        data-testid="sidebar-toggle"
         className={style.collapsedBtn}
         theme={ButtonTheme.BACKGROUND_INVERTED}
         square={true}

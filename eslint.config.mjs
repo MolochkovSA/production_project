@@ -16,14 +16,10 @@ export default [
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       indent: ['error', 2],
-      'i18next/no-literal-string': ['error', { markupOnly: true }],
+      'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
       'max-len': ['error', { code: 120, ignoreComments: true }],
       'react/prop-types': [2, { ignore: ['children'] }],
     },
     plugins: { i18next },
   },
-
-  // {
-  //   ignores: ['.node_modules/*', '.build/*', '.src/*'],
-  // },
 ]
