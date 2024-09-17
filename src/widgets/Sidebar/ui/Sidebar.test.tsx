@@ -1,25 +1,16 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { Sidebar } from './Sidebar'
-import { MemoryRouter } from 'react-router-dom'
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx'
+import { componentRender } from 'shared/lib/tests/componentRender/componentRender'
 
 describe('Sidebar', () => {
   test('test render', () => {
-    renderWithTranslation(
-      <MemoryRouter>
-        <Sidebar />
-      </MemoryRouter>
-    )
+    componentRender(<Sidebar />)
     expect(screen.getByTestId('sidebar')).toBeInTheDocument()
     // screen.debug()
   })
 
   test('test toggle', () => {
-    renderWithTranslation(
-      <MemoryRouter>
-        <Sidebar />
-      </MemoryRouter>
-    )
+    componentRender(<Sidebar />)
 
     const toggleBtn = screen.getByTestId('sidebar-toggle')
     fireEvent.click(toggleBtn)
