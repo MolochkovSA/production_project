@@ -16,6 +16,7 @@ export default [
     languageOptions: {
       globals: { ...globals.browser, ...globals.es2021 },
       parserOptions: {
+        ...pluginReact.configs.recommended.parserOptions,
         ecmaFeatures: {
           tsx: true,
         },
@@ -42,7 +43,9 @@ export default [
     rules: {
       'react/react-in-jsx-scope': 'off',
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-shadow': 'off',
+      '@typescript-eslint/no-shadow': 'error',
       indent: ['error', 2],
       'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
       'max-len': ['error', { code: 120, ignoreComments: true }],
