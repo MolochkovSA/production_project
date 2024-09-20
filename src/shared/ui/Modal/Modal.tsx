@@ -17,7 +17,6 @@ export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClo
 
   const mods: Record<string, boolean> = {
     [style.opened]: isOpen,
-    [style[theme]]: true,
   }
 
   useEffect(() => {
@@ -48,7 +47,7 @@ export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClo
 
   return (
     <Portal>
-      <div className={classNames(style.Modal, mods, [className])}>
+      <div className={classNames(style.Modal, mods, [className, theme])}>
         <div className={style.overlay} onClick={handleClose}>
           <div className={style.content} onClick={onContentClick}>
             {children}
