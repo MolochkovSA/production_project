@@ -3,7 +3,6 @@ import { classNames } from 'shared/lib'
 import { Portal } from '../Portal/Portal'
 
 import style from './Modal.module.scss'
-import { useTheme } from 'app/providers/ThemeProvider'
 
 interface ModalProps {
   className?: string
@@ -13,8 +12,6 @@ interface ModalProps {
 }
 
 export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClose }) => {
-  const { theme } = useTheme()
-
   const mods: Record<string, boolean> = {
     [style.opened]: isOpen,
   }
@@ -47,7 +44,7 @@ export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClo
 
   return (
     <Portal>
-      <div className={classNames(style.Modal, mods, [className, theme])}>
+      <div className={classNames(style.Modal, mods, [className])}>
         <div className={style.overlay} onClick={handleClose}>
           <div className={style.content} onClick={onContentClick}>
             {children}
