@@ -13,8 +13,11 @@ import pluginReactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   {
+    ignores: ['**/json-server'],
+  },
+  {
     languageOptions: {
-      globals: { ...globals.browser, ...globals.es2021 },
+      globals: { ...globals.node, ...globals.browser, ...globals.es2021 },
       parserOptions: {
         ...pluginReact.configs.recommended.parserOptions,
         ecmaFeatures: {
