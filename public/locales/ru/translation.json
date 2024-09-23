@@ -7,5 +7,7 @@
   "ShortLanguage": "RU",
   "Main": "Главная",
   "About": "О сайте",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Username": "Имя пользователя",
+  "Password": "Пароль"
 }

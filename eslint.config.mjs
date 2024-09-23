@@ -48,7 +48,7 @@ export default [
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-shadow': 'off',
-      '@typescript-eslint/no-shadow': 'error',
+      '@typescript-eslint/no-shadow': 'off',
       indent: ['error', 2],
       'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
       'max-len': ['error', { code: 120, ignoreComments: true }],

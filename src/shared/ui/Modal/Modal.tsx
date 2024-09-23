@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { classNames } from 'shared/lib'
 import { Portal } from '../Portal/Portal'
 
@@ -9,12 +9,15 @@ interface ModalProps {
   children?: React.ReactNode
   isOpen?: boolean
   onClose?: () => void
+  lazy?: boolean
 }
 
-export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClose }) => {
+export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClose, lazy }) => {
   const mods: Record<string, boolean> = {
     [style.opened]: isOpen,
   }
+
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -32,6 +35,12 @@ export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClo
     }
   }, [onClose, isOpen])
 
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true)
+    }
+  }, [isOpen])
+
   const handleClose = () => {
     if (onClose) {
       onClose()
@@ -40,6 +49,10 @@ export const Modal: React.FC<ModalProps> = ({ className, children, isOpen, onClo
 
   const onContentClick = (e: React.MouseEvent) => {
     e.stopPropagation()
+  }
+
+  if (lazy && !isMounted) {
+    return null
   }
 
   return (

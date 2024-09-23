@@ -7,5 +7,7 @@
   "ShortLanguage": "EN",
   "Main": "Main",
   "About": "About",
-  "Login": "Login"
+  "Login": "Login",
+  "Username": "Username",
+  "Password": "Password"
 }
