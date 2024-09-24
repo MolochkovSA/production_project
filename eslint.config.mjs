@@ -16,6 +16,13 @@ export default [
     ignores: ['**/json-server'],
   },
   {
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
     languageOptions: {
       globals: { ...globals.node, ...globals.browser, ...globals.es2021 },
       parserOptions: {
