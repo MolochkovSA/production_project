@@ -10,6 +10,7 @@ describe('counterSlice', () => {
       value: 11,
     })
   })
+
   test('decrement', () => {
     const state: CounterSchema = {
       value: 10,
@@ -18,6 +19,7 @@ describe('counterSlice', () => {
       value: 9,
     })
   })
+
   test('should work with empty state', () => {
     expect(counterReducer(undefined, counterActions.increment())).toEqual({
       value: 1,
