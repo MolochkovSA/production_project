@@ -9,5 +9,8 @@
   "About": "About",
   "Login": "Login",
   "Username": "Username",
-  "Password": "Password"
+  "Password": "Password",
+  "Login form": "Login form",
+  "You entered an incorrect username or password": "You entered an incorrect username or password",
+  "Logout": "Logout"
 }

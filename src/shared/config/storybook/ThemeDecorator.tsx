@@ -4,7 +4,7 @@ import { Theme, ThemeProvider } from 'app/providers/ThemeProvider'
 import { classNames } from 'shared/lib'
 
 export const ThemeDecorator = (theme: Theme) =>
-  function StyleDecorator(Story: StoryFn) {
+  function ThemeDecorator(Story: StoryFn) {
     return (
       <ThemeProvider initialTheme={theme}>
         <div className={classNames('app', {}, [theme])}>
